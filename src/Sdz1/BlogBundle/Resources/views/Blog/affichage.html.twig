@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8" /> 
+        <title>Bienvenue sur ma premi�re page avec le Site du Z�ro!</title>
+    </head>
+    <body>
+        <h1>Hello Men !</h1>
+        <p>
+            <a href="{{ path ('sdzblog_voir', {'id': 9}) }}"> lien vers l'article {{ id }}</a>
+            {% for message in app.session.flashbag.get('info') %}
+              <p> {{ message }} </p>
+            {% endfor %}
+        </p>
+    </body>
+</html>

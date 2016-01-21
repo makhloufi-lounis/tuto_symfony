@@ -1,0 +1,7 @@
+sdz1_blog:
+    resource: "@Sdz1BlogBundle/Resources/config/routing.yml"
+    prefix:   /blog
+
+app:
+    resource: @AppBundle/Controller/
+    type:     annotation

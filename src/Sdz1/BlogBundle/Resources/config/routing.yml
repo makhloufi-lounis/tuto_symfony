@@ -1,0 +1,38 @@
+MyRoute:
+    path:     /MySite
+    defaults: { _controller: Sdz1BlogBundle:BlogManager:index }
+sdzblog_accueil:
+    path:     /{page}
+    defaults: { _controller: Sdz1BlogBundle:myBlog:index, page: 1 }
+    requirements:    
+        page:    \d
+sdzblog_voir:
+    path:     /article/{id}
+    defaults: { _controller: Sdz1BlogBundle:myBlog:voir }
+    requirements:    
+        id:    \d+
+sdzblog_ajouter:
+    path:     /ajouter
+    defaults: { _controller: Sdz1BlogBundle:myBlog:ajouter }
+sdzblog_modifier:
+    path:    /modifier/{id}
+    defaults: { _controller: Sdz1BlogBundle:myBlog:modifier }
+    requirements:    
+        id:    \d+
+sdzblog_supprimer:
+    path:    /supprimer/{id}
+    defaults: { _controller: Sdz1BlogBundle:myBlog:supprimer }
+    requirements:    
+        id:    \d+
+sdzblog_voir_slug:
+    path:    /{annee}/{slug}.{format}
+    defaults: { _controller: Sdz1BlogBundle:myBlog:voirSlug, _format: html }
+    requirements:
+        annee:    \d{4}
+        format:    html|xml 
+
+
+    
+    
+    
+
